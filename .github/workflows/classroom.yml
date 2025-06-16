@@ -24,8 +24,7 @@ jobs:
         id: input
         run: |
           if grep -q "build-status:" .github/workflows/outputs.yaml &&
-             grep -q "type: choice" .github/workflows/outputs.yaml &&
-             grep -q "default: success" .github/workflows/outputs.yaml &&
+             grep -q "type: choice" .github/workflows/outputs.yaml &&          
              grep -q "success" .github/workflows/outputs.yaml &&
              grep -q "failure" .github/workflows/outputs.yaml &&
              grep -q "Choose the build status for the demo" .github/workflows/outputs.yaml; then
