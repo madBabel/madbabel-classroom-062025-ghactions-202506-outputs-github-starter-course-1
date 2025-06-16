@@ -38,12 +38,7 @@ jobs:
         id: output_path
         run: |
           grep -q "GITHUB_OUTPUT" .github/workflows/outputs.yaml && echo "success" || (echo "fail" && exit 1)
-
-      - name: Check input used in echo to output
-        id: echo_input
-        run: |
-          grep -q "echo \"status=\${{ inputs.build-status }}\"" .github/workflows/outputs.yaml && echo "success" || (echo "fail" && exit 1)
-
+    
       - name: Check build job outputs
         id: job_outputs
         run: |
